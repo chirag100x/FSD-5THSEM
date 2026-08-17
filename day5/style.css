@@ -1,0 +1,12 @@
+/* grid view */
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+#product-container div {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
