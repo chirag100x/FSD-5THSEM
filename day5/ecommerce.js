@@ -46,6 +46,7 @@ const getProductData = async () => {
     products.map((product) => {
          const productContainer = document.getElementById('product-container');
 const div = document.createElement('div');
+div.className = 'product-card';
 
 const image = document.createElement('img');
 image.src = product.thumbnail;

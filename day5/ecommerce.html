@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FSD Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark">FSD</span>
+            <div>
+                <p class="brand-kicker">College Practice</p>
+                <h1>Mini Store</h1>
+            </div>
+        </div>
+        <nav class="topnav">
+            <a href="./ecommerce.html" class="nav-link active">Products</a>
+            <a href="./cart.html" class="nav-link">Cart</a>
+        </nav>
     </header>
     <main>
-        <nav>
-            <a href="./cart.html" id="cart-link">Cart</a>
-        </nav>
+       
         <div id="product-container">
             <!-- Product items will be dynamically inserted here -->
         </div>
     </main>
-    <footer>
-
-    </footer>
     <script src="ecommerce.js"></script>
 </body>
 </html>
