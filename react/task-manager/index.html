@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">PRODUCTIVITY</p>
+        <h1>Task Manager</h1>
+        <p class="subtitle">Organize your work and keep track of what matters.</p>
+      </div>
+      <div class="progress-wrap">
+        <span id="progressText">0% complete</span>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+    </header>
+
+    <section class="add-section">
+      <input id="taskInput" type="text" placeholder="Enter New Task" maxlength="100">
+      <button id="addBtn" type="button">+ Add Task</button>
+    </section>
+
+    <section class="stats" aria-label="Task statistics">
+      <article class="stat-card total">
+        <strong id="totalCount">0</strong>
+        <span>Total Task</span>
+      </article>
+      <article class="stat-card completed">
+        <strong id="completedCount">0</strong>
+        <span>Completed</span>
+      </article>
+      <article class="stat-card pending">
+        <strong id="pendingCount">0</strong>
+        <span>Pending</span>
+      </article>
+    </section>
+
+    <div class="filter-row" role="tablist">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="completed">Completed</button>
+      <button class="filter" data-filter="pending">Pending</button>
+    </div>
+
+    <section class="content-grid">
+      <div class="tasks-panel">
+        <div id="taskList" class="task-list"></div>
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">✓</div>
+          <h3>No tasks yet</h3>
+          <p>Add your first task above.</p>
+        </div>
+      </div>
+
+      <aside class="completed-panel">
+        <div class="panel-heading">
+          <h2>Task Completed Date</h2>
+          <span id="completedBadge">0</span>
+        </div>
+        <div id="completedDates" class="completed-dates">
+          <p class="muted">Completed tasks will appear here.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -5,11 +5,16 @@ const existingUserOne = { name: 'Alice', email: 'alice@example.com', password: '
 const existingUserTwo = { name: 'Bob', email: 'bob@example.com', password: 'abcdef' };
 
 function showMessage(text, type = 'success') {
+    if (!message) return;
+
     message.textContent = text;
     message.style.color = type === 'success' ? 'green' : 'red';
+    message.style.display = 'block';
 }
 
 if (form) {
+    form.noValidate = true;
+
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
